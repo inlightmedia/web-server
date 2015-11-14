@@ -8,7 +8,6 @@ var PORT = 3000; //when you use uppercase in a variable name it means you should
 // MIDDLE WARE
 var middleware = require('./middleware.js');
 
-
 // MIDDLE WARE SPECIFICATION SECTION
 
 // NOTE: Middleware must be specified at the top
@@ -21,7 +20,7 @@ app.use(middleware.requireAuthentication);
 
 // having middleware in the app.get requiers authenticaiotn for just one route not every route in the app
 app.get('/about', middleware.requireAuthentication, function (request, response) { //get tis the http request method also put patch delete
-	response.send('About Us!');
+	response.send('About Us');
 });
 
 app.use(express.static(__dirname + '/public')); 
