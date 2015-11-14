@@ -6,17 +6,8 @@ var PORT = 3000; //when you use uppercase in a variable name it means you should
 
 
 // MIDDLE WARE
-var middleware = {
-	requireAuthentication: function (request, response, next) {
-		console.log('Private route hit.');
-		next();
-	},
-	logger: function (request, response, next) {
-		
-		console.log('Request: ' + request.method + ' ' + request.originalUrl + ' Date: ' + new Date().toString());
-		next();
-	}
-};
+var middleware = require('./middleware.js');
+
 
 // MIDDLE WARE SPECIFICATION SECTION
 
