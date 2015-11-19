@@ -2,7 +2,8 @@
 
 var express = require('express');
 var app = express();
-var PORT = 3000; //when you use uppercase in a variable name it means you should not change the valkue of the variable its should be constant
+var PORT = process.env.PORT || 3000; //when you use uppercase in a variable name it means you should not change the valkue of the variable its should be constant 
+// the above will use herokus port unless it is not there then itll use our lovacl port
 
 
 // MIDDLE WARE
